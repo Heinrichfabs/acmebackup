@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+
 <!doctype html>
 <html>
 
@@ -12,6 +15,7 @@
 <header>
     <h1>AC <span>ME</span></h1>
     <p>pet clinic</p>
+    
 </header>
 
 <body>
@@ -26,8 +30,7 @@
                 <li><a href={{ URL('personnel') }}>Personnel</a></li>
                 <li><a href="{{ URL('diseaseinjury') }}">Disease / Injury</a></li>
                 <li><a href="{{ URL('adopter') }}">Adopters</a></li>
+                <li><a href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a></li>
             </ul>
     </nav>
-    @yield('contents')
-</body>
-</html>
+    @yield('contents') 
