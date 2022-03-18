@@ -26,12 +26,11 @@
 
 <div class="py-3">
     <table class="table-auto">
-        <tr class="text-white">
+        <tr class="text-center">
             <th class="w-screen text-3xl">Id</th> 
             <th class="w-screen text-3xl">Full Name</th>
             <th class="w-screen text-3xl">Email</th>
             <th class="w-screen text-3xl">Role</th>
-            <th class="w-screen text-3xl">Personnel Pic</th>
             <th class="w-screen text-3xl">Update</th>
             <th class="w-screen text-3xl">Delete</th>
             <th class="w-screen text-3xl">Restore</th>
@@ -52,9 +51,7 @@
           <td class=" text-center text-3xl">
                 {{ $personnel->role }}
           </td>
-          <td class="pl-12">
-            <img src="{{ asset('uploads/personnels/'.$personnel->images)}}" alt="I am A Pic" width="75" height="75">
-          </td>
+          
           <td class=" text-center">
             <a href="personnel/{{ $personnel->personnel_id }}/edit" class="text-center text-3xl bg-green-600 p-2">
                 Update &rarr; 
