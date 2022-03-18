@@ -40,6 +40,7 @@ header{
         background-color: #f4f4f4;
         padding: 20px;
         position: sticky;
+        
         top: 85px;
     }
     
@@ -47,16 +48,20 @@ header{
         white-space: nowrap;
         max-width: 1200px;
         margin: 0 auto;
+        
+        
     }
     
     nav li{
         width: 15%;
+        
         display: inline-block;
         font-size: 24px;
     }
     
     nav a{
         text-decoration: none;
+        
         color: #4b4b4b;
         font-size: 80%;
     }
@@ -67,10 +72,12 @@ header{
     
     main{
         max-width: 100%;
+        
         width: 1200px;
         margin: 80px auto;
         padding: 0 40px;
         box-sizing: border-box;
+        
     }
     
     article h2{
