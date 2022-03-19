@@ -1,3 +1,6 @@
+@extends('homepage')
+
+@section('contents')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,27 +13,25 @@
 </head>
 
 <body
-    style="background-image:linear-gradient(rgba(212, 212, 212, 0.1),rgba(212,212,212,0.1)), url(https://wallpapercave.com/wp/B1sODrM.jpg); background-size:cover;">
     <div class="pt-4 pb-20 my-5">
         <div class="text-center">
-            <h1 class="text-5xl">
-                Search Adoptable Animals
-            </h1>
+            <h1 class="text-5xl"> Search Adoptable Animals</h1>
+            <div class="flex justify-center pt-4">
+                <form action="{{ url('result') }}" type="GET">
+                    <input type="result" name="result" id="result" placeholder="Search"class="text-center pb-1 px-2 mr-4 w-full">
+                   
+                        <button class="bg-green-800 text-black font-bold p-2 mt-5">Search</button>
+                        <a href="{{url('login') }}" class="bg-gray-800 text-white font-bold p-2 mt-5 text-center"
+                            role="button">Back</a>
+                
+                </form>
+            </div>
         </div>
-        <div class="flex justify-center pt-4">
-            <form action="{{ url('result') }}" type="GET">
-                <input type="result" name="result" id="result" placeholder="Search"
-                    class="text-center pb-1 px-2 mr-4 w-full">
-                <div class="grid grid-cols-2 gap-2 w-full pb-6">
-                    <button class="bg-green-800 text-white font-bold p-2 mt-5">Search</button>
-                    <a href="{{url('login') }}" class="bg-gray-800 text-white font-bold p-2 mt-5 text-center"
-                        role="button">Back</a>
-                </div>
-            </form>
-        </div>
+      
+        
         <div class="py-3">
             <table class="table-auto">
-                <tr class="text-white text-center">
+                <tr class="text-black text-center">
                     <th class="w-screen text-3xl">Id</th>
                     <th class="w-screen text-3xl">Animal Name</th>
                     <th class="w-screen text-3xl">Age</th>
@@ -70,6 +71,8 @@
             </table>
         </div>
         </tr>
+     
 </body>
 
 </html>
+@endsection
