@@ -76,10 +76,22 @@
 </div>
 @endsection --}}
 
+@extends('homepage')
 
-@extends('layouts.app')
 
-@section('content')
+@section('contents')
+<br><br>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                
+                <div class="card-header">
+                   
+                 
+                    {{-- <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a> --}}
+
+                <div class="card-body">
 <div class="container">
 
     <h1 class="text-5xl">
@@ -89,7 +101,7 @@
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
-        <div class="row mb-3">
+        
             <label for="full_name" class="col-form-label">{{ __('Full Name') }}</label>
 
             <div class="col-md-6">
@@ -102,9 +114,9 @@
                 </span>
                 @enderror
             </div>
-        </div>
+     
 
-        <div class="row mb-3">
+       
             <label for="email" class="col-form-label">{{ __('Email Address') }}</label>
 
             <div class="col-md-6">
@@ -117,9 +129,9 @@
                 </span>
                 @enderror
             </div>
-        </div>
+      
 
-        <div class="row mb-3">
+       
             <label for="password" class="col-form-label">{{ __('Password') }}</label>
 
             <div class="col-md-6">
@@ -132,18 +144,18 @@
                 </span>
                 @enderror
             </div>
-        </div>
+       
 
-        <div class="row mb-3">
+     
             <label for="password-confirm" class="col-form-label">{{ __('Confirm Password') }}</label>
 
             <div class="col-md-6">
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required
                     autocomplete="new-password">
             </div>
-        </div>
+        
 
-        <div class="row mb-3">
+     
             <label for="role" class="col-form-label">Pick Your Role</label>
             <div class="col-md-6">
                 <select name="role" id="role" class="form-select" value="{{old('role')}}">
@@ -152,7 +164,7 @@
                     <option>Volunteer</option>
                 </select>
             </div>
-        </div>
+        
 
         <div class="row">
             <div class="col-md-6">
@@ -163,5 +175,10 @@
             </div>
         </div>
     </form>
+</div>
+
+</div>
+</div>
+</div>
 </div>
 @endsection
