@@ -1,6 +1,7 @@
-@extends('layouts.app')
+@extends('homepage')
 
-@section('content')
+@section('contents')
+<br><br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -8,8 +9,8 @@
                 
                 <div class="card-header">
                    
-                    {{ __('Login') }} <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></div>
-                
+                    {{ __('Login') }}</div>
+                    {{-- <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a> --}}
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
