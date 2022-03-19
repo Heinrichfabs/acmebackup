@@ -34,6 +34,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
+Route::get('/homewelcome', function () {
+    return view('homewelcome');
+});
+
 Route::get("/search", [animalController::class, "search"])->name("search");
 Route::get("/result", [animalController::class, "result"])->name("result");
 
