@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('home')
 
 @section('content')
 
@@ -16,7 +16,7 @@
 
 <div class="py-3">
   <table class="table-auto text-center">
-    <tr class="text-white">
+    <tr>
       <th class="w-screen text-3xl">Id</th>
       <th class="w-screen text-3xl">First Name</th>
       <th class="w-screen text-3xl">Last Name</th>
